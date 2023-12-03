@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAMI</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'img/logo.svg' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <script src= "{% static 'js/script.js' %}"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-container">
+      <div class="column-left">
+        <!-- Dropdown -->
+        <div class="dropdown">
+          <button class="dropbtn">- Select Cuisine -</button>
+          <div class="dropdown-content">
+            <a href="#" onclick="selectOption('Italian')">Italian</a>
+            <a href="#" onclick="selectOption('Mexican')">Mexican</a>
+            <a href="#" onclick="selectOption('Chinese')">Chinese</a>
+            <a href="#" onclick="selectOption('Indian')">Indian</a>
+            <a href="#" onclick="selectOption('- Select Cuisine -')">- None -</a>
+          </div>
+        </div>
+        <!-- Checkboxes -->
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" id="tick-box-1"> Go Wild
+            </label>
+            <label>
+                <input type="checkbox" id="tick-box-2"> Ignore Preferences
+            </label>
+        </div>
+        <!-- Buttons -->
+        <button onclick="myFunction()">Generate</button>
+        <button onclick="myFunction()">Add Ingredients</button>
+      </div>
+      <div id="chatbox">
+        <ul id="chat"></ul>
+        <div id="input-box">
+          <input type="text" id="message-input" placeholder="Type your message...">
+          <button id="send-button">Send</button>
+        </div>
+      </div>
+  </section>
